@@ -4,9 +4,9 @@ public class ServiceStation implements ServiceStationAll {
         for (Car tempCar : car) {
             System.out.println("Обслуживаем " + tempCar.getModelName());
             for (int i = 0; i < tempCar.getWheelsCount(); i++) {
-                tempCar.updateTyre();
+                updateTyre();
             }
-            tempCar.checkEngine();
+            checkEngine();
         }
     }
 
@@ -15,7 +15,7 @@ public class ServiceStation implements ServiceStationAll {
         for (Bicycle tempBicyle : bicycle) {
             System.out.println("Обслуживаем " + tempBicyle.getModelName());
             for (int i = 0; i < tempBicyle.getWheelsCount(); i++) {
-                tempBicyle.updateTyre();
+                updateTyre();
             }
         }
     }
@@ -25,10 +25,21 @@ public class ServiceStation implements ServiceStationAll {
         for (Truck tempTruck : truck) {
             System.out.println("Обслуживаем " + tempTruck.getModelName());
             for (int i = 0; i < tempTruck.getWheelsCount(); i++) {
-                tempTruck.updateTyre();
+                updateTyre();
             }
-            tempTruck.checkEngine();
+            checkEngine();
             tempTruck.checkTrailer();
         }
     }
+
+    @Override
+    public void updateTyre() {
+        System.out.println("Меняем покрышку");
+    }
+
+    @Override
+    public void checkEngine() {
+        System.out.println("Проверяем двигатель");
+    }
+
 }

@@ -4,4 +4,8 @@ public interface ServiceStationAll {
     void check(Bicycle[] bicycle);
 
     void check(Truck[] truck);
+
+    public void updateTyre();
+
+    public void checkEngine();
 }
